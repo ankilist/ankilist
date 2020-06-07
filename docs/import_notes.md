@@ -34,3 +34,11 @@ by semi colons -- look at how Jisho handles the above example.
 - id
 - definition (semi-colon separated string of definitions?) -- maybe each "sense" should be a separate entry?
 - reading_id
+
+## Additional Notes
+
+To improve the formatting of the XML file you can install the tool `tidy` and run something like:
+
+```shell
+tidy -xml -i FILE > formatted_file 2> /dev/null
+```
