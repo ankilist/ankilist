@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_06_08_115228) do
   enable_extension "plpgsql"
 
   create_table "definitions", force: :cascade do |t|
-    t.string "string"
+    t.string "definition"
     t.bigint "reading_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -29,4 +29,5 @@ ActiveRecord::Schema.define(version: 2020_06_08_115228) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+
 end

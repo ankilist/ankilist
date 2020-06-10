@@ -9,7 +9,7 @@ class InitialReadingsTable < ActiveRecord::Migration[6.0]
     end
 
     create_table :definitions do |t|
-      t.string :string
+      t.string :definition
       t.references :reading
       t.timestamps
     end
