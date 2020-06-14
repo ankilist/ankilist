@@ -17,15 +17,25 @@ ActiveRecord::Schema.define(version: 2020_06_08_115228) do
 
   create_table "definitions", force: :cascade do |t|
     t.string "definition"
-    t.bigint "reading_id"
+    t.string "part_of_speech"
+    t.string "misc_info"
+    t.bigint "word_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["reading_id"], name: "index_definitions_on_reading_id"
+    t.index ["word_id"], name: "index_definitions_on_word_id"
   end
 
   create_table "readings", force: :cascade do |t|
     t.string "reading"
-    t.boolean "primary"
+    t.boolean "primary", default: false
+    t.boolean "primary_kana", default: false
+    t.bigint "word_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["word_id"], name: "index_readings_on_word_id"
+  end
+
+  create_table "words", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

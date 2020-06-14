@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
 class Reading < ApplicationRecord
-  has_many :definitions
+  belongs_to :word
+  has_many :definitions, through: :word
 end
