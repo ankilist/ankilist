@@ -1,7 +1,8 @@
 import React from 'react';
 
 export default () => (
-<React.Fragment>
+<div className="grid">
   <h1>AnkiList</h1>
-</React.Fragment>
+  <h2>Turn Language lists into Anki cards effortlessly</h2>
+</div>
 );
