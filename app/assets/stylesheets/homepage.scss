@@ -18,11 +18,13 @@
 
 body {
   font-size: 18px;
+  font-family: 'Roboto';
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
@@ -42,5 +44,36 @@ h2 {
 .grid {
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+}
+
+.card-section {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.card {
+  font-size: 2.618rem;
+  color: #707070;
+  border: 1px solid #707070;
+  text-align: center;
+  padding: 1rem 1.5rem;
+
+  p {
+    font-size: 1.618rem;
+  }
+
+  button {
+    background-color: #303030;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 50px;
+    width: 100%;
+    font-size: 1.5rem;
+  }
 }
