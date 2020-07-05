@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Card: React.FC = () => {
+type CardProps = { header: string, body: string, button: string };
+const Card: React.FC<CardProps> = ({ header, body, button }) => {
   return (
     <div className="card">
-      <h5>Upload a list</h5>
-      <p>Upload a text file containing words to be converted</p>
-      <button type="button">Upload</button>
+      <h5>{header}</h5>
+      <p>{body}</p>
+      <button type="button">{button}</button>
     </div>
   )
 };
